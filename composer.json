@@ -1,0 +1,55 @@
+{
+    "name": "rowshr/livewire-calendar",
+    "description": "Laravel Livewire calendar component",
+    "keywords": [
+        "rowshr",
+        "livewire-calendar"
+    ],
+    "homepage": "https://github.com/IonutRusen/livewire-calendar/",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "ROWSHR",
+            "email": "info@rowshr.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0|^8.1|^8.2",
+        "illuminate/support": "^v9.5|^10|^11.0",
+        "livewire/livewire": "^2.0|^3.2"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.0|^6.0",
+        "phpunit/phpunit": "^8.0|^9.0|^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Asantibanez\\LivewireCalendar\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Asantibanez\\LivewireCalendar\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Asantibanez\\LivewireCalendar\\LivewireCalendarServiceProvider"
+            ],
+            "aliases": {
+                "LivewireCalendar": "Asantibanez\\LivewireCalendar\\LivewireCalendarFacade"
+            }
+        }
+    }
+}
